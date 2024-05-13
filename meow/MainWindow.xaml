@@ -33,10 +33,12 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
 
-            <StackPanel>
-                <Image Source="/Images/menu.png" Height="48" Width="48" Margin="30 20 0 0"  HorizontalAlignment="Left" />
-            </StackPanel>
-
+            <Rectangle Width="48" Height="48" Margin="30 20 0 0" HorizontalAlignment="Left">
+                <Rectangle.Fill>
+                    <ImageBrush Stretch="UniformToFill" ImageSource="Images/menu.png"/>
+                </Rectangle.Fill>
+            </Rectangle>
+ 
 
 
             
@@ -46,7 +48,7 @@
                          Height="50"
                          Foreground="#495B5B"
                          FontSize="25" 
-                         FontFamily ="Archivo Black"
+                         FontFamily ="Archivo Bold"
                          Style="{StaticResource MenuButtonTheme}"
                          Command="{ Binding HomeViewCommand }" />
 
