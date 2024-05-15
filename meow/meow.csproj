@@ -9,15 +9,23 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\doc.jpeg" />
     <None Remove="Images\edword.png" />
+    <None Remove="Images\light-menu.png" />
     <None Remove="Images\menu.png" />
+    <None Remove="Images\notif.png" />
+    <None Remove="Images\user.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Images\doc.jpeg" />
     <Resource Include="Images\edword.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Images\light-menu.png" />
     <Resource Include="Images\menu.png" />
+    <Resource Include="Images\notif.png" />
+    <Resource Include="Images\user.png" />
   </ItemGroup>
 
 </Project>

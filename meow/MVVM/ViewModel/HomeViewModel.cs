@@ -8,6 +8,6 @@ namespace design.MVVM.ViewModel
 {
     internal class HomeViewModel
     {
-
+        
     }
 }

@@ -20,37 +20,123 @@
     <Border Background="White"
         CornerRadius="29">
         <Grid>
+
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="200"/>
                 <ColumnDefinition Width="59*" />
                 <ColumnDefinition Width="62*"/>
                 <ColumnDefinition Width="209*"/>
-                <ColumnDefinition Width="400"/>
+                <ColumnDefinition Width="184.235"/>
+                <ColumnDefinition Width="215.765"/>
             </Grid.ColumnDefinitions>
 
             <Grid.RowDefinitions>
-                <RowDefinition Height="100"/>
+                <RowDefinition Height="113"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-
-            <Rectangle Width="48" Height="48" Margin="30 20 0 0" HorizontalAlignment="Left">
-                <Rectangle.Fill>
-                    <ImageBrush Stretch="UniformToFill" ImageSource="Images/menu.png"/>
-                </Rectangle.Fill>
-            </Rectangle>
- 
-
-
             
-            <StackPanel Grid.Row="0" Grid.Column="2" Orientation="Horizontal" Grid.ColumnSpan="3">
+            <Grid x:Name="sidepanel" HorizontalAlignment="Left" Grid.ColumnSpan="2" Grid.RowSpan="2" Width="360" Height="1080" Background="#30A1A1" >
+                <Rectangle VerticalAlignment="Top" Width="48" Height="48" Panel.ZIndex="10" Margin="30,38,0,27" HorizontalAlignment="Left" MouseDown="Rectangle_MouseDown">
+                        <Rectangle.Fill>
+                            <ImageBrush x:Name="light_menu" Stretch="UniformToFill"  ImageSource="Images/light-menu.png"/>
+                        </Rectangle.Fill>
+                    </Rectangle>
+
+                <StackPanel  x:Name="content_menu" HorizontalAlignment="Center" Margin="0 50 0 0">
+
+                    <TextBlock
+                        HorizontalAlignment="Center"
+                        FontSize="48"
+                        Foreground="White"
+                        Opacity=".6"
+                        Text="YuriLo" 
+                        FontWeight="Bold"></TextBlock>
+
+                    <RadioButton Content="Аналитика"
+                                 Grid.Row="1"
+                                 HorizontalAlignment="Center"
+                                 VerticalAlignment="Center"
+                                 Margin="-45 150 0 0"
+                                 Height="50"
+                                 Foreground="White"
+                                 FontSize="25" 
+                                 Opacity=".6"
+                                 FontFamily ="Archivo Black"
+                                 Style="{StaticResource MenuButtonTheme}"
+                                 Command="{ Binding HomeViewCommand }" />
+                    <RadioButton Content="Документы"
+             Grid.Row="1"
+             HorizontalAlignment="Center"
+             VerticalAlignment="Center"
+             Margin="-45 0 0 0"
+             Height="50"
+             Foreground="White"
+             FontSize="25" 
+             Opacity=".6"
+             FontFamily ="Archivo Black"
+             Style="{StaticResource MenuButtonTheme}"
+             Command="{ Binding HomeViewCommand }" />
+
+                    <RadioButton Content="Профиль"
+             Grid.Row="1"
+             HorizontalAlignment="Center"
+             VerticalAlignment="Center"
+             Margin="-45 0 0 0"
+             Height="50"
+             Foreground="White"
+             FontSize="25" 
+             Opacity=".6"
+             FontFamily ="Archivo Black"
+             Style="{StaticResource MenuButtonTheme}"
+             Command="{ Binding HomeViewCommand }" />
+
+                    <RadioButton Content="Услуги"
+             Grid.Row="1"     
+             HorizontalAlignment="Center"
+             VerticalAlignment="Center"
+             Margin="-45 0 0 0"
+             Height="50"
+             Foreground="White"
+             FontSize="25" 
+             Opacity=".6"
+             FontFamily ="Archivo Black"
+             Style="{StaticResource MenuButtonTheme}"
+             Command="{ Binding HomeViewCommand }" />
+                    
+                    <StackPanel VerticalAlignment="Bottom">
+                        <Button 
+                        FontSize="18"
+                        Grid.Row="2"
+                        Height="50"
+                        Width="230"
+                            Margin="0 520 0 0"
+                        FontWeight="Bold"
+                        Content="Выйти" 
+                        Style="{StaticResource LightButtonTheme}"  />
+                    </StackPanel>
+
+                   
+                </StackPanel>
+            </Grid>
+ <Rectangle x:Name="panelHeader"  Width="48" Margin="30,38,0,27" HorizontalAlignment="Left" MouseDown="panelHeader_MouseDown">
+                        <Rectangle.Fill>
+                            <ImageBrush Stretch="UniformToFill" ImageSource="Images/menu.png"/>
+                        </Rectangle.Fill>
+                    </Rectangle>
+           
+            <Rectangle Grid.ColumnSpan="4" Fill="#30A1A1" Height="2" Width="1200" HorizontalAlignment="Left" VerticalAlignment="Bottom" Grid.Column="1" Margin="160,0,0,0"/>
+
+
+
+            <StackPanel Margin="24,0,0,0" Grid.Row="0" Grid.Column="2" Orientation="Horizontal" Grid.ColumnSpan="4">
 
                 <RadioButton Content="Встречи"
                          Height="50"
                          Foreground="#495B5B"
                          FontSize="25" 
-                         FontFamily ="Archivo Bold"
+                         FontFamily ="Archivo Black"
                          Style="{StaticResource MenuButtonTheme}"
-                         Command="{ Binding HomeViewCommand }" />
+                         Command="{Binding HomeViewCommand}" />
 
                 <RadioButton Content="События"
                          Height="50"
@@ -58,7 +144,7 @@
                        FontSize="25"
                              FontFamily ="Archivo Black"
                               Style="{StaticResource MenuButtonTheme}"
-                       Command="{ Binding DiscoveryViewCommand}" />
+                       Command="{Binding DiscoveryViewCommand}" />
 
                 <RadioButton Content="Контрагенты"
                 Height="50"
@@ -66,16 +152,16 @@
                 Foreground="#495B5B"
                 FontSize="25" 
                 Style="{StaticResource MenuButtonTheme}"
-                Command="{ Binding HomeViewCommand }"  />
+                Command="{Binding HomeViewCommand}"  />
 
 
                 <RadioButton Content="Документы"
-                             FontFamily ="Archivo Black"
-                Height="50"
-                Foreground="#495B5B"
-                FontSize="25" 
-                Style="{StaticResource MenuButtonTheme}"
-                Command="{ Binding HomeViewCommand }"  />
+                            FontFamily ="Archivo Black"
+                            Height="50"
+                            Foreground="#495B5B"
+                            FontSize="25" 
+                            Style="{StaticResource MenuButtonTheme}"
+                            Command="{Binding HomeViewCommand}"  />
 
 
                 <RadioButton Content="Настройки"
@@ -84,14 +170,21 @@
                 Foreground="#495B5B"
                 FontSize="25" 
                 Style="{StaticResource MenuButtonTheme}"
-                Command="{ Binding HomeViewCommand }"  />
+                Command="{Binding HomeViewCommand}"  />
                 
             </StackPanel>
 
-            <Image Grid.Column="3" HorizontalAlignment="Right" Height="50" Margin="0 0 20 0" Source="/Images/notif.png" Stretch="Uniform"  Width="50"/>
+            <Rectangle  Grid.Column="3" Width="50"  HorizontalAlignment="Right" Margin="0,36,56,27">
+                <Rectangle.Stroke>
+                    <SolidColorBrush Color="white" />
+                </Rectangle.Stroke>
+                <Rectangle.Fill>
+                    <ImageBrush Stretch="Uniform" ImageSource="/Images/notif.png" />
+                </Rectangle.Fill>
+            </Rectangle>
 
 
-            <Ellipse  HorizontalAlignment="Left" Grid.Column="4" Width="81" Margin="40,10,0,10">
+            <Ellipse  HorizontalAlignment="Left" Grid.Column="3" Width="100" Margin="826,10,0,10" Grid.ColumnSpan="2">
                 <Ellipse.Fill>
                     <ImageBrush Stretch="UniformToFill" ImageSource="/Images/edword.png"/>
                 </Ellipse.Fill>
@@ -111,7 +204,7 @@
             <ContentControl Grid.Row="1"
                             Grid.Column="1"
                             Margin="10,10,10,10"
-                            Content="{Binding CurrentView}" Grid.ColumnSpan="3"
+                            Content="{Binding CurrentView}" Grid.ColumnSpan="3" FontFamily="Archivo Black"
                          />
 
 
