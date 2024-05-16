@@ -30,7 +30,7 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
           
-                <TextBlock x:Name="dfw"  Grid.Column="0" Grid.Row="0" 
+                <TextBlock x:Name="dfw" x:Uid="a" Grid.Column="0" Grid.Row="0" Text="ПОНЕДЕЛЬНИК, 22 апреля "
                    Foreground="#495B5B"
                    FontSize="32"
                    Margin="0 20 20 20"

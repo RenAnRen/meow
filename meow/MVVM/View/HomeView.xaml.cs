@@ -20,11 +20,24 @@ namespace design.MVVM.View
     /// </summary>
     public partial class HomeView : UserControl
     {
-        public HomeView()
+           public string DayOfWeek
         {
-            InitializeComponent();
+            get { return dfw.Text; }
+            set { dfw.Text = value; }
         }
 
+        public HomeView()
+        {
+           InitializeComponent();
+          
+        }
+
+     
+      
+
+      
+
         
-    }
+    } 
+   
 }

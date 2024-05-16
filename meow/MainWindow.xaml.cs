@@ -19,26 +19,34 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace design
 {
+  
+
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
 
-
         public MainWindow()
         {
             InitializeComponent();
             sidepanel.Visibility = Visibility.Hidden;
+           
+            
+            HomeView hm = new HomeView();
+            
+            hm.dfw.Text = DateTime.Now.ToString("dddd").ToUpper() + ", " + $"{DateTime.Now:M}";
+            hm.DayOfWeek = DateTime.Now.ToString("dddd").ToUpper() + ", " + $"{DateTime.Now:M}";
+            MessageBox.Show(hm.DayOfWeek);
 
-            HomeView homeView = new HomeView();
-          
-            homeView.dfw.Text = DateTime.Now.DayOfWeek.ToString();
-            MessageBox.Show(homeView.dfw.Text);
         }
-
+        
+             
+          
     
+#pragma warning disable IDE1006 // Стили именования
         private void panelHeader_MouseDown(object sender, MouseButtonEventArgs e)
+#pragma warning restore IDE1006 // Стили именования
         {
             
 
