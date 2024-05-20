@@ -30,14 +30,7 @@ namespace design
         public MainWindow()
         {
             InitializeComponent();
-            sidepanel.Visibility = Visibility.Hidden;
-           
-            
-            HomeView hm = new HomeView();
-            
-            hm.dfw.Text = DateTime.Now.ToString("dddd").ToUpper() + ", " + $"{DateTime.Now:M}";
-            hm.DayOfWeek = DateTime.Now.ToString("dddd").ToUpper() + ", " + $"{DateTime.Now:M}";
-            MessageBox.Show(hm.DayOfWeek);
+            sidepanel.Visibility = Visibility.Hidden; 
 
         }
         
@@ -66,22 +59,7 @@ namespace design
             panelHeader.Visibility = Visibility.Visible;
         }
 
-      
-
-        //private static void DayOfWeek()
-        //{
-        //    DateTime date = DateTime.Now;
-        //    string day = date.ToString("dddd");
-        //    //   HomeView HVM = new HomeView();
-        //    string DAY = day.ToUpper();
-        //    string aaa = DAY + ", " + $"{date:M}";
-        //    MainWindow hmv = new MainWindow();
-        //    hmv.Show();
-
-        //    hmv.DataContext = aaa;
-
-        //    //HVM.dfw.Text = day + ", " + $"{date:M}";
-        //}
+     
 
     }
 }

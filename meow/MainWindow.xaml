@@ -11,7 +11,8 @@
         ResizeMode="NoResize"
         FontFamily="Archivo"
         Background="White"
-        AllowsTransparency="True">
+        AllowsTransparency="True"
+        WindowState="Maximized">
 
     <Window.DataContext>
         <viewModel:MainViewModel/>
@@ -35,14 +36,14 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
             
-            <Grid x:Name="sidepanel" HorizontalAlignment="Left" Grid.ColumnSpan="2" Grid.RowSpan="2" Width="360" Height="1080" Background="#30A1A1" >
+            <Grid Visibility="Hidden" x:Name="sidepanel" HorizontalAlignment="Left" Grid.ColumnSpan="2" Grid.RowSpan="2" Width="360" Height="1080" Background="#30A1A1" >
                 <Rectangle VerticalAlignment="Top" Width="48" Height="48" Panel.ZIndex="10" Margin="30,38,0,27" HorizontalAlignment="Left" MouseDown="Rectangle_MouseDown">
                         <Rectangle.Fill>
                             <ImageBrush x:Name="light_menu" Stretch="UniformToFill"  ImageSource="Images/light-menu.png"/>
                         </Rectangle.Fill>
                     </Rectangle>
 
-                <StackPanel  x:Name="content_menu" HorizontalAlignment="Center" Margin="0 50 0 0">
+                <StackPanel Panel.ZIndex="1000"  x:Name="content_menu" HorizontalAlignment="Center" Margin="0 50 0 0">
 
                     <TextBlock
                         HorizontalAlignment="Center"
@@ -118,7 +119,7 @@
                    
                 </StackPanel>
             </Grid>
- <Rectangle x:Name="panelHeader"  Width="48" Margin="30,38,0,27" HorizontalAlignment="Left" MouseDown="panelHeader_MouseDown">
+            <Rectangle x:Name="panelHeader"  Width="48" Margin="30,38,0,27" HorizontalAlignment="Left" MouseDown="panelHeader_MouseDown">
                         <Rectangle.Fill>
                             <ImageBrush Stretch="UniformToFill" ImageSource="Images/menu.png"/>
                         </Rectangle.Fill>
@@ -170,7 +171,7 @@
                 Foreground="#495B5B"
                 FontSize="25" 
                 Style="{StaticResource MenuButtonTheme}"
-                Command="{Binding HomeViewCommand}"  />
+                Command="{Binding SettingsViewCommand}"  />
                 
             </StackPanel>
 
@@ -201,7 +202,7 @@
                      Margin="5" 
                      Style="{StaticResource ModernTextbox}"/>-->
 
-            <ContentControl Grid.Row="1"
+            <ContentControl Panel.ZIndex="100" Grid.Row="1"
                             Grid.Column="1"
                             Margin="10,10,10,10"
                             Content="{Binding CurrentView}" Grid.ColumnSpan="3" FontFamily="Archivo Black"

@@ -18,30 +18,22 @@ namespace design.MVVM.View
     /// <summary>
     /// Логика взаимодействия для HomeView.xaml
     /// </summary>
-    public partial class HomeView : UserControl
+    public partial class SettingsView : UserControl
     {
-           public string DayOfWeek
-        {
-            get { return dfw.Text; }
-            set { dfw.Text = value; }
-        }
+         
 
-        public HomeView()
+        public SettingsView()
         {
            InitializeComponent();
-
-        
-            DayOfWeek = DateTime.Now.ToString("dddd").ToUpper() + ", " + $"{DateTime.Now:M}";
-
-
+          
         }
 
+     
+      
 
+      
 
-
-
-
-
+        
     } 
    
 }

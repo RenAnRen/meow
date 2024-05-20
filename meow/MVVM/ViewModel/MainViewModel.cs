@@ -12,10 +12,12 @@ namespace design.MVVM.ViewModel
 
         public RelayCommand HomeViewCommand { get; set; }
         public RelayCommand DiscoveryViewCommand { get; set; }
+        public RelayCommand SettingsViewCommand { get; set; }
 
 
         public HomeViewModel HomeMV { get; set; }
         public DiscoveryViewModel DiscoveryMV { get; set; }
+        public SettingsViewModel SettingsMV { get; set; }
 
 
         private object _currentView;
@@ -31,6 +33,7 @@ namespace design.MVVM.ViewModel
         {
             HomeMV = new HomeViewModel();
             DiscoveryMV = new DiscoveryViewModel();
+            SettingsMV = new SettingsViewModel();
             CurrentView = HomeMV;
 
 
@@ -42,6 +45,11 @@ namespace design.MVVM.ViewModel
             DiscoveryViewCommand = new RelayCommand(o =>
             {
                 CurrentView = DiscoveryMV;
+            });
+
+            SettingsViewCommand = new RelayCommand(o =>
+            {
+                CurrentView = SettingsMV;
             });
         }
     }

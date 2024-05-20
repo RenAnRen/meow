@@ -14,7 +14,9 @@
     <None Remove="Images\light-menu.png" />
     <None Remove="Images\menu.png" />
     <None Remove="Images\notif.png" />
-    <None Remove="Images\user.png" />
+    <None Remove="Images\sup.jpg" />
+    <None Remove="Images\tha.jpg" />
+    <None Remove="Images\user.jpg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -25,7 +27,9 @@
     <Resource Include="Images\light-menu.png" />
     <Resource Include="Images\menu.png" />
     <Resource Include="Images\notif.png" />
-    <Resource Include="Images\user.png" />
+    <Resource Include="Images\sup.jpg" />
+    <Resource Include="Images\tha.jpg" />
+    <Resource Include="Images\user.jpg" />
   </ItemGroup>
 
 </Project>
