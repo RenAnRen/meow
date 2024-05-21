@@ -30,7 +30,10 @@ namespace design
         public MainWindow()
         {
             InitializeComponent();
-            sidepanel.Visibility = Visibility.Hidden; 
+            sidepanel.Visibility = Visibility.Hidden;
+
+            RadioButton.
+        
 
         }
         

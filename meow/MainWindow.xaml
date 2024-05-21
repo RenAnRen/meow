@@ -137,7 +137,7 @@
                          FontSize="25" 
                          FontFamily ="Archivo Black"
                          Style="{StaticResource MenuButtonTheme}"
-                         Command="{Binding HomeViewCommand}" />
+                         Command="{Binding MeetsViewCommand}" />
 
                 <RadioButton Content="События"
                          Height="50"
@@ -145,7 +145,7 @@
                        FontSize="25"
                              FontFamily ="Archivo Black"
                               Style="{StaticResource MenuButtonTheme}"
-                       Command="{Binding DiscoveryViewCommand}" />
+                       Command="{Binding ContractorViewCommand}" />
 
                 <RadioButton Content="Контрагенты"
                 Height="50"
@@ -202,9 +202,9 @@
                      Margin="5" 
                      Style="{StaticResource ModernTextbox}"/>-->
 
-            <ContentControl Panel.ZIndex="100" Grid.Row="1"
-                            Grid.Column="1"
-                            Margin="10,10,10,10"
+            <ContentControl Grid.Row="1"
+                            Grid.Column="1" 
+                            Margin="10 10 10 10"
                             Content="{Binding CurrentView}" Grid.ColumnSpan="3" FontFamily="Archivo Black"
                          />
 

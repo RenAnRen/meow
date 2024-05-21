@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="design.MVVM.View.DiscoveryView"
+﻿<UserControl x:Class="design.MVVM.View.ContractorView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -9,11 +9,11 @@ FontFamily="Archivo"
              d:DesignHeight="1080" d:DesignWidth="1920"
              Background="Transparent">
     <Grid HorizontalAlignment="Center">
-        <Grid>
+        <Grid Width="1920">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition />
                 <ColumnDefinition />
-                <ColumnDefinition />
+                <ColumnDefinition  />
             </Grid.ColumnDefinitions>
 
             <Grid.RowDefinitions>
@@ -22,18 +22,18 @@ FontFamily="Archivo"
             </Grid.RowDefinitions>
 
             <StackPanel Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <Grid Margin="500 0 0 20">
+                <Grid Margin="200 0 0 20">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                         <RowDefinition/>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
                     <StackPanel Margin="0 0 0 20"  Grid.Row="1">
-                        <Border Background="Wheat" Opacity="1" Grid.Row="1" Width="580" Height="700" CornerRadius="30" BorderThickness="6" BorderBrush="#FFFDFDFD">
+                        <Border BorderBrush="#495B5B" Background="Transparent" Opacity="1" Grid.Row="1" Width="580" Height="700" CornerRadius="30" BorderThickness="3">
                             <TextBlock TextWrapping="Wrap"> 
                             <Label Content="Заметки" Foreground="#495B5B" FontSize="20" Margin="50 40 10 10"/>
                             <Rectangle Height="1"  Fill="#495B5B" Width="350" Margin="-92"/>  
-                             <TextBox  Margin="35"  TextWrapping="WrapWithOverflow" Text="При необходимости внесите дополнительные сведения о контрагенте, если доступные поля не подходят для этого...."   Foreground="White" x:Name="notes"/>
+                             <TextBox  BorderThickness="0" Margin="35"  TextWrapping="WrapWithOverflow" Text="При необходимости внесите дополнительные сведения о контрагенте, если доступные поля не подходят для этого...."   Foreground="White" x:Name="notes"/>
                             </TextBlock>
                             
                         </Border>

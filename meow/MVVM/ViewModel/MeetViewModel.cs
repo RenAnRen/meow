@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace design.MVVM.ViewModel
 {
-    internal class DiscoveryViewModel
+    internal class MeetViewModel
     {
     }
 }

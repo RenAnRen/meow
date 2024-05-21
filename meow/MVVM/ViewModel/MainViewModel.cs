@@ -11,14 +11,16 @@ namespace design.MVVM.ViewModel
     {
 
         public RelayCommand HomeViewCommand { get; set; }
-        public RelayCommand DiscoveryViewCommand { get; set; }
+        public RelayCommand ContractorViewCommand { get; set; }
         public RelayCommand SettingsViewCommand { get; set; }
-
+        public RelayCommand MeetViewCommand { get; set; }
+        public RelayCommand MeetsViewCommand { get; set; }
 
         public HomeViewModel HomeMV { get; set; }
-        public DiscoveryViewModel DiscoveryMV { get; set; }
+        public ContractorViewModel ContractorMV { get; set; }
         public SettingsViewModel SettingsMV { get; set; }
-
+        public MeetViewModel MeetMV { get; set; }
+        public MeetsViewModel MeetsMV { get; set; }
 
         private object _currentView;
 
@@ -32,8 +34,11 @@ namespace design.MVVM.ViewModel
         public MainViewModel()
         {
             HomeMV = new HomeViewModel();
-            DiscoveryMV = new DiscoveryViewModel();
+            ContractorMV = new ContractorViewModel();
             SettingsMV = new SettingsViewModel();
+            MeetMV = new MeetViewModel();
+            MeetsMV = new MeetsViewModel();
+
             CurrentView = HomeMV;
 
 
@@ -42,14 +47,24 @@ namespace design.MVVM.ViewModel
                 CurrentView = HomeMV;
             });
 
-            DiscoveryViewCommand = new RelayCommand(o =>
+            ContractorViewCommand = new RelayCommand(o =>
             {
-                CurrentView = DiscoveryMV;
+                CurrentView = ContractorMV;
             });
 
             SettingsViewCommand = new RelayCommand(o =>
             {
                 CurrentView = SettingsMV;
+            });
+
+            MeetViewCommand = new RelayCommand(o =>
+            {
+                CurrentView = MeetMV;
+            });
+
+            MeetsViewCommand = new RelayCommand(o =>
+            {
+                CurrentView = MeetsMV;
             });
         }
     }

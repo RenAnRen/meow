@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="1080" d:DesignWidth="1920"
              FontFamily="/Fonts/#Archivo Black">
-    
+
     <StackPanel HorizontalAlignment="Center" >
         <TextBlock Text="«Не откладывай на сегодня вопросы, ответы на которые&#xA; ты мог получить ещё вчера»" 
                  Foreground="#495B5B"
@@ -29,20 +29,20 @@
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-          
-                <TextBlock x:Name="dfw" x:Uid="a" Grid.Column="0" Grid.Row="0" Text="ПОНЕДЕЛЬНИК, 22 апреля "
+
+            <TextBlock x:Name="dfw" x:Uid="a" Grid.Column="0" Grid.Row="0" Text="ПОНЕДЕЛЬНИК, 22 апреля "
                    Foreground="#495B5B"
                    FontSize="32"
                    Margin="0 20 20 20"
                    HorizontalAlignment="Left"/>
-                <TextBlock  Grid.Column="1" Grid.Row="0"
+            <TextBlock  Grid.Column="1" Grid.Row="0"
                     Text="Сегодня"
                     Foreground="#495B5B"
                     FontSize="32"
                     Margin="100 20 150 0" HorizontalAlignment="Left" />
-                   
+
         </Grid>
-       
+
 
         <StackPanel>
             <StackPanel.Resources>
@@ -55,19 +55,40 @@
                     <Setter Property="Padding" Value="10"/>
                 </Style>
             </StackPanel.Resources>
-          
-            <StackPanel Margin="20 20 20 20" Grid.Row="2" Orientation="Vertical" HorizontalAlignment="Left" Height="700" Width="450">
-                <Border CornerRadius="100">
-                    
-                    <TextBlock Height="175" Padding="10" Style="{StaticResource TextblockTheme}" >
-                    <!--<Image Source="yourImage.jpg"/>-->
+
+            <StackPanel Margin="-10 20 20 20" Grid.Row="2" Orientation="Vertical" HorizontalAlignment="Left" Height="700" Width="518">
+                <Border  Width="500" Height="175" Background="White" BorderThickness="1" CornerRadius="30" BorderBrush="#30A1A1">
+                    <Border.Effect>
+                        <DropShadowEffect Direction="315" BlurRadius="10" ShadowDepth="2" Color="#30A1A1"/>
+                    </Border.Effect>
+                    <TextBlock Background="Transparent" Height="175"  Style="{StaticResource TextblockTheme}">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+<RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                                
+                           <Ellipse Grid.Column="1" Width="100"  Height="100" HorizontalAlignment="Right" Grid.RowSpan="4" Margin="0,17,-300,-8">
+                              <Ellipse.Fill>
+                                  <ImageBrush Stretch="UniformToFill" ImageSource="/Images/user.jpg"/>
+                              </Ellipse.Fill>               
+                            </Ellipse>                            
+                            
+                            <Label FontWeight="Bold" Grid.Column="0" Grid.Row="0" Foreground="#495B5B" x:Name="Time" Content="qwdqwd" FontSize="32" Margin="0,0,0,12" Grid.RowSpan="2" />
+                            <Label  Grid.Column="0" Grid.Row="1" Foreground="#495B5B" x:Name="Type"  Content="qwdqwd"/>
+                            <Label Grid.Column="0" Grid.Row="2" Foreground="#495B5B" x:Name="Contractor" Content="qwdqwd"/>
+                            <Label  Grid.Column="0" Grid.Row="3" Content="qwdqwd"  Foreground="#495B5B" x:Name="Number"/>    
+                        </Grid>
 
                     </TextBlock>
                 </Border>
-                <TextBlock Height="175" Style="{StaticResource TextblockTheme}" Text="First line"/>
-                <TextBlock Height="175" Style="{StaticResource TextblockTheme}" Text="Second line"/>
-                <TextBlock Height="175" Style="{StaticResource TextblockTheme}" Text="Third line"/>
-                  
+
 
             </StackPanel>
         </StackPanel>
@@ -81,7 +102,7 @@
          FontFamily="/Fonts/#Archivo SemiBold"/>
         <!--// //////////////////////////////////////////////////////////////////////////-->
 
- <!--<TextBlock  Text="Discover"
+        <!--<TextBlock  Text="Discover"
                        Foreground="White"
                        FontSize="28"
                        HorizontalAlignment="Left"
@@ -169,7 +190,7 @@
                         CornerRadius="10"/>
             </StackPanel>
         </StackPanel>-->
-        
-        
+
+
     </StackPanel>
 </UserControl>

@@ -1,27 +1,29 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Style TargetType="{x:Type TextBox}"
-           x:Key="ModernTextbox">
+           x:Key="Search">
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type TextBox}">
                     <Border CornerRadius="10"
                             Background="Transparent"
-                          >
+                            Width="200"
+                            Height="40">
                         <Grid>
+                            <Rectangle StrokeThickness="1"/>
                             <TextBox Margin="1"
                                        Text="{TemplateBinding Text}"
                                        Background="Transparent"
                                        BorderThickness="0"
-                                        Width="500"
-                                     Height="40"
                                        VerticalAlignment="Center"
                                      Padding="5"
-                                     Foreground="#495B5B"
-                                     x:Name="Мяу"/>
+                                     Foreground="#30aa30"
+                                     x:Name="Search"/>
+
                             <TextBlock IsHitTestVisible="False"
+                                       Text="Поиск"
                                        VerticalAlignment="Center"
-                                       HorizontalAlignment="Center"
+                                       HorizontalAlignment="Left"
                                        Margin="10 0 0 0 "
                                        FontSize="11"
                                        Foreground="DarkGray"
@@ -30,17 +32,15 @@
                                 <TextBlock.Style>
                                     <Style TargetType="{x:Type TextBlock}">
                                         <Style.Triggers>
-                                            <DataTrigger Binding="{Binding Text, ElementName=Мяу}" Value="">
+                                            <DataTrigger Binding="{Binding Text, ElementName=Search}" Value="">
                                                 <Setter Property="Visibility" Value="Visible"/>
-                                                <Setter Property="Foreground" Value="#39a10a"/>
                                             </DataTrigger>
-
                                         </Style.Triggers>
                                         <Setter Property="Visibility" Value="Hidden"/>
                                     </Style>
                                 </TextBlock.Style>
+
                             </TextBlock>
-                            <Rectangle Width="520" Height="1" Fill="#495B5B"/>
                         </Grid>
                     </Border>
                 </ControlTemplate>

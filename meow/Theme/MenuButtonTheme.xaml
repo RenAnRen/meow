@@ -4,13 +4,13 @@
            TargetType="{x:Type RadioButton}"
            x:Key="MenuButtonTheme">
         <Style.Setters>
-            <Setter Property="Template">
+            <Setter Property="Template"  >
                 <Setter.Value>
-                    <ControlTemplate TargetType="RadioButton">
+                    <ControlTemplate  TargetType="RadioButton">
                         <Grid VerticalAlignment="Stretch"
                           HorizontalAlignment="Stretch"
                           Background="{TemplateBinding Background}">
-                            <ContentPresenter ContentSource="{TemplateBinding ContentStringFormat}"  
+                            <ContentPresenter  ContentSource="{TemplateBinding ContentStringFormat}"  
                                               VerticalAlignment="Center"
                                               Margin="50,0,0,0" />
                         </Grid>
@@ -24,8 +24,9 @@
 
         <Style.Triggers>
             <Trigger Property="IsChecked" Value="True">
-                <Setter Property="Foreground" Value="White"/>
+                <Setter Property="Foreground" Value="Red"/>
             </Trigger>
+
         </Style.Triggers>
     </Style>
 </ResourceDictionary>
