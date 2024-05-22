@@ -12,6 +12,7 @@
     <None Remove="Images\doc.jpeg" />
     <None Remove="Images\edword.png" />
     <None Remove="Images\light-menu.png" />
+    <None Remove="Images\logo.png" />
     <None Remove="Images\menu.png" />
     <None Remove="Images\notif.png" />
     <None Remove="Images\sup.jpg" />
@@ -25,6 +26,7 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\light-menu.png" />
+    <Resource Include="Images\logo.png" />
     <Resource Include="Images\menu.png" />
     <Resource Include="Images\notif.png" />
     <Resource Include="Images\sup.jpg" />

@@ -14,6 +14,7 @@
                 <ResourceDictionary Source="Theme/LightButtonTheme.xaml"/>
                 <ResourceDictionary Source="Theme/DarkButtonTheme.xaml"/>
                 <ResourceDictionary Source="Theme/Search.xaml"/>
+                <ResourceDictionary Source="Theme/ComboBox.xaml"/>
             </ResourceDictionary.MergedDictionaries>
 
             <DataTemplate DataType="{x:Type viewModel:HomeViewModel}">
@@ -25,6 +26,11 @@
                 <view:ContractorView />
             </DataTemplate>
 
+            <DataTemplate DataType="{x:Type viewModel:ContractorsViewModel}">
+                <view:ContractorsView />
+            </DataTemplate>
+
+            
             <DataTemplate DataType="{x:Type viewModel:SettingsViewModel}">
                 <view:SettingsView />
             </DataTemplate>

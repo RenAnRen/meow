@@ -33,9 +33,9 @@ FontFamily="Archivo"
                             <TextBlock TextWrapping="Wrap"> 
                             <Label Content="Заметки" Foreground="#495B5B" FontSize="20" Margin="50 40 10 10"/>
                             <Rectangle Height="1"  Fill="#495B5B" Width="350" Margin="-92"/>  
-                             <TextBox  BorderThickness="0" Margin="35"  TextWrapping="WrapWithOverflow" Text="При необходимости внесите дополнительные сведения о контрагенте, если доступные поля не подходят для этого...."   Foreground="White" x:Name="notes"/>
+                            <TextBox  BorderThickness="0" Margin="30" TextWrapping="WrapWithOverflow" Text="При необходимости внесите дополнительные сведения о контрагенте, если доступные поля не подходят для этого...."   Foreground="White" x:Name="notes" Height="520" Width="509"/>
                             </TextBlock>
-                            
+
                         </Border>
                     </StackPanel>
                     <StackPanel Grid.Row="2" Orientation="Horizontal">
@@ -62,7 +62,7 @@ FontFamily="Archivo"
                     </Ellipse>
 
                     <TextBox BorderThickness="0"  BorderBrush="White" TextWrapping="NoWrap" Grid.ColumnSpan="2" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Stretch" x:Name="name" Margin="200 0 0 0" Height="30" Width="520" />
-                    
+
                     <StackPanel Margin="0 25 10 10"  Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Left">
                         <Label Foreground="#495b5b" FontSize="20" Height="40" Content="Тип субъекта"  />
                         <Label Foreground="#495b5b" FontSize="20" Height="40" Content="Представитель"  />

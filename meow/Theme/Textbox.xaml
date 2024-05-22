@@ -32,7 +32,7 @@
                                         <Style.Triggers>
                                             <DataTrigger Binding="{Binding Text, ElementName=Мяу}" Value="">
                                                 <Setter Property="Visibility" Value="Visible"/>
-                                                <Setter Property="Foreground" Value="#39a10a"/>
+                                                <Setter Property="Foreground" Value="#30A1A1"/>
                                             </DataTrigger>
 
                                         </Style.Triggers>
@@ -40,7 +40,7 @@
                                     </Style>
                                 </TextBlock.Style>
                             </TextBlock>
-                            <Rectangle Width="520" Height="1" Fill="#495B5B"/>
+                            <Rectangle Margin="0 20 0 0" Width="520" Height="1" Fill="#495B5B"/>
                         </Grid>
                     </Border>
                 </ControlTemplate>

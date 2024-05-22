@@ -7,8 +7,8 @@
                 <ControlTemplate TargetType="{x:Type TextBox}">
                     <Border CornerRadius="10"
                             Background="Transparent"
-                            Width="200"
-                            Height="40">
+                            Width="850"
+                            Height="30">
                         <Grid>
                             <Rectangle StrokeThickness="1"/>
                             <TextBox Margin="1"
@@ -17,7 +17,7 @@
                                        BorderThickness="0"
                                        VerticalAlignment="Center"
                                      Padding="5"
-                                     Foreground="#30aa30"
+                                     Foreground="#30A1A1"
                                      x:Name="Search"/>
 
                             <TextBlock IsHitTestVisible="False"
@@ -26,7 +26,7 @@
                                        HorizontalAlignment="Left"
                                        Margin="10 0 0 0 "
                                        FontSize="11"
-                                       Foreground="DarkGray"
+                                       Foreground="#495B5B"
                                        Grid.Column="1">
 
                                 <TextBlock.Style>
@@ -41,6 +41,7 @@
                                 </TextBlock.Style>
 
                             </TextBlock>
+                            <Rectangle HorizontalAlignment="Left" VerticalAlignment="Bottom" Fill="black" Opacity="0.6" Height="2" Width="950"/>
                         </Grid>
                     </Border>
                 </ControlTemplate>

@@ -35,13 +35,13 @@
                 <RowDefinition Height="113"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            
+
             <Grid Visibility="Hidden" x:Name="sidepanel" HorizontalAlignment="Left" Grid.ColumnSpan="2" Grid.RowSpan="2" Width="360" Height="1080" Background="#30A1A1" >
                 <Rectangle VerticalAlignment="Top" Width="48" Height="48" Panel.ZIndex="10" Margin="30,38,0,27" HorizontalAlignment="Left" MouseDown="Rectangle_MouseDown">
-                        <Rectangle.Fill>
-                            <ImageBrush x:Name="light_menu" Stretch="UniformToFill"  ImageSource="Images/light-menu.png"/>
-                        </Rectangle.Fill>
-                    </Rectangle>
+                    <Rectangle.Fill>
+                        <ImageBrush x:Name="light_menu" Stretch="UniformToFill"  ImageSource="/Images/light-menu.png"/>
+                    </Rectangle.Fill>
+                </Rectangle>
 
                 <StackPanel Panel.ZIndex="1000"  x:Name="content_menu" HorizontalAlignment="Center" Margin="0 50 0 0">
 
@@ -103,7 +103,7 @@
              FontFamily ="Archivo Black"
              Style="{StaticResource MenuButtonTheme}"
              Command="{ Binding HomeViewCommand }" />
-                    
+
                     <StackPanel VerticalAlignment="Bottom">
                         <Button 
                         FontSize="18"
@@ -116,15 +116,15 @@
                         Style="{StaticResource LightButtonTheme}"  />
                     </StackPanel>
 
-                   
+
                 </StackPanel>
             </Grid>
             <Rectangle x:Name="panelHeader"  Width="48" Margin="30,38,0,27" HorizontalAlignment="Left" MouseDown="panelHeader_MouseDown">
-                        <Rectangle.Fill>
-                            <ImageBrush Stretch="UniformToFill" ImageSource="Images/menu.png"/>
-                        </Rectangle.Fill>
-                    </Rectangle>
-           
+                <Rectangle.Fill>
+                    <ImageBrush Stretch="UniformToFill" ImageSource="/Images/menu.png"/>
+                </Rectangle.Fill>
+            </Rectangle>
+
             <Rectangle Grid.ColumnSpan="4" Fill="#30A1A1" Height="2" Width="1200" HorizontalAlignment="Left" VerticalAlignment="Bottom" Grid.Column="1" Margin="160,0,0,0"/>
 
 
@@ -137,7 +137,7 @@
                          FontSize="25" 
                          FontFamily ="Archivo Black"
                          Style="{StaticResource MenuButtonTheme}"
-                         Command="{Binding MeetsViewCommand}" />
+                         Command="{Binding MeetsViewCommand}" Unchecked="RadioButton_Unchecked" Checked="RadioButton_Checked" />
 
                 <RadioButton Content="События"
                          Height="50"
@@ -145,7 +145,7 @@
                        FontSize="25"
                              FontFamily ="Archivo Black"
                               Style="{StaticResource MenuButtonTheme}"
-                       Command="{Binding ContractorViewCommand}" />
+                       Command="{Binding ContractorViewCommand}" IsChecked="False" Checked="RadioButton_Checked" Unchecked="RadioButton_Unchecked" />
 
                 <RadioButton Content="Контрагенты"
                 Height="50"
@@ -153,7 +153,7 @@
                 Foreground="#495B5B"
                 FontSize="25" 
                 Style="{StaticResource MenuButtonTheme}"
-                Command="{Binding HomeViewCommand}"  />
+                Command="{Binding HomeViewCommand}" IsChecked="False" Unchecked="RadioButton_Unchecked" Checked="RadioButton_Checked"  />
 
 
                 <RadioButton Content="Документы"
@@ -162,7 +162,7 @@
                             Foreground="#495B5B"
                             FontSize="25" 
                             Style="{StaticResource MenuButtonTheme}"
-                            Command="{Binding HomeViewCommand}"  />
+                            Command="{Binding HomeViewCommand}" IsChecked="False" Checked="RadioButton_Checked" Unchecked="RadioButton_Unchecked"  />
 
 
                 <RadioButton Content="Настройки"
@@ -171,11 +171,11 @@
                 Foreground="#495B5B"
                 FontSize="25" 
                 Style="{StaticResource MenuButtonTheme}"
-                Command="{Binding SettingsViewCommand}"  />
-                
+                Command="{Binding SettingsViewCommand}" IsChecked="False" Unchecked="RadioButton_Unchecked" Checked="RadioButton_Checked"  />
+
             </StackPanel>
 
-            <Rectangle  Grid.Column="3" Width="50"  HorizontalAlignment="Right" Margin="0,36,56,27">
+            <Rectangle  Grid.Column="3" Width="50" Height="55" HorizontalAlignment="Right" Margin="0,26,56,27">
                 <Rectangle.Stroke>
                     <SolidColorBrush Color="white" />
                 </Rectangle.Stroke>

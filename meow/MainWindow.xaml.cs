@@ -32,7 +32,7 @@ namespace design
             InitializeComponent();
             sidepanel.Visibility = Visibility.Hidden;
 
-            RadioButton.
+            
         
 
         }
@@ -62,7 +62,18 @@ namespace design
             panelHeader.Visibility = Visibility.Visible;
         }
 
-     
+        private void RadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+            RadioButton rb = (RadioButton)sender;
+            rb.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#30A1A1")); ;
+        }
 
+        private void RadioButton_Unchecked(object sender, RoutedEventArgs e)
+        {
+            RadioButton rb = (RadioButton)sender;
+            rb.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#495B5B"));
+        }
+
+     
     }
 }

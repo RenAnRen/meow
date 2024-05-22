@@ -12,12 +12,14 @@ namespace design.MVVM.ViewModel
 
         public RelayCommand HomeViewCommand { get; set; }
         public RelayCommand ContractorViewCommand { get; set; }
+        public RelayCommand ContractorsViewCommand { get; set; }
         public RelayCommand SettingsViewCommand { get; set; }
         public RelayCommand MeetViewCommand { get; set; }
         public RelayCommand MeetsViewCommand { get; set; }
 
         public HomeViewModel HomeMV { get; set; }
         public ContractorViewModel ContractorMV { get; set; }
+        public ContractorsViewModel ContractorsMV { get; set; }
         public SettingsViewModel SettingsMV { get; set; }
         public MeetViewModel MeetMV { get; set; }
         public MeetsViewModel MeetsMV { get; set; }
@@ -35,6 +37,7 @@ namespace design.MVVM.ViewModel
         {
             HomeMV = new HomeViewModel();
             ContractorMV = new ContractorViewModel();
+            ContractorsMV = new ContractorsViewModel();
             SettingsMV = new SettingsViewModel();
             MeetMV = new MeetViewModel();
             MeetsMV = new MeetsViewModel();
@@ -50,6 +53,11 @@ namespace design.MVVM.ViewModel
             ContractorViewCommand = new RelayCommand(o =>
             {
                 CurrentView = ContractorMV;
+            });
+
+            ContractorsViewCommand = new RelayCommand(o =>
+            {
+                CurrentView = ContractorsMV;
             });
 
             SettingsViewCommand = new RelayCommand(o =>
