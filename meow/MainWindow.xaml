@@ -203,9 +203,9 @@
                      Style="{StaticResource ModernTextbox}"/>-->
 
             <ContentControl Grid.Row="1"
-                            Grid.Column="1" 
+                            Grid.Column="0" 
                             Margin="10 10 10 10"
-                            Content="{Binding CurrentView}" Grid.ColumnSpan="3" FontFamily="Archivo Black"
+                            Content="{Binding CurrentView}" Grid.ColumnSpan="5" FontFamily="Archivo Black"
                          />
 
 

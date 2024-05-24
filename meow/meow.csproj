@@ -9,15 +9,25 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\delete.svg" />
     <None Remove="Images\doc.jpeg" />
     <None Remove="Images\edword.png" />
     <None Remove="Images\light-menu.png" />
     <None Remove="Images\logo.png" />
     <None Remove="Images\menu.png" />
     <None Remove="Images\notif.png" />
+    <None Remove="Images\search.svg" />
     <None Remove="Images\sup.jpg" />
     <None Remove="Images\tha.jpg" />
     <None Remove="Images\user.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Npgsql" Version="8.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\delete.svg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -25,6 +35,7 @@
     <Resource Include="Images\edword.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Images\search.svg" />
     <Resource Include="Images\light-menu.png" />
     <Resource Include="Images\logo.png" />
     <Resource Include="Images\menu.png" />

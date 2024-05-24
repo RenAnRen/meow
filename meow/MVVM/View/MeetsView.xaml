@@ -13,8 +13,9 @@
 
 
             <ComboBox x:Name="comboBox"
-                HorizontalAlignment="Left"
-                 Margin="20"
+                
+                HorizontalAlignment="Center"
+                Margin="0 300 0 20"
                 Background="Transparent"
                 FontSize="20"
                 HorizontalContentAlignment="Center"
@@ -38,21 +39,8 @@
                     </StackPanel>
                 </ComboBoxItem>
             </ComboBox>
-            <ComboBox x:Name="comboBoxDate"
-        HorizontalAlignment="Left"
-         Margin="20 0 10 20"
-        Background="Transparent"
-        FontSize="20"
-        HorizontalContentAlignment="Center"
-        VerticalContentAlignment="Center"
-        Text="ДД.ММ.ГГГГ" 
-        IsEditable="True"
-        IsTextSearchEnabled="True"
-        BorderBrush="#495B5B"
-        Height="40" Width="300"
-        Foreground="#495B5B"/>
             <ComboBox x:Name="comboBoxcont"
-HorizontalAlignment="Left"
+HorizontalAlignment="Center"
  Margin="20 0 10 20"
 Background="Transparent"
 FontSize="20"
@@ -63,10 +51,19 @@ IsEditable="True"
 IsTextSearchEnabled="True"
 BorderBrush="#495B5B"
 Height="40" Width="300"
-Foreground="#495B5B"/>
-
+Foreground="#495B5B" />
+            <DatePicker HorizontalAlignment="Center"  BorderBrush="#495B5B" Text="ДД.ММ.ГГГГ"
+Height="40" Width="300"
+Foreground="#495B5B" Margin="20 0 10 20"
+Background="Transparent"
+FontSize="20"
+                        x:Name="Date"
+HorizontalContentAlignment="Center"
+VerticalContentAlignment="Center" />
+            
             <ComboBox x:Name="comboBoxserv"
-HorizontalAlignment="Left"
+                     
+HorizontalAlignment="Center"
  Margin="20 0 10 20"
 Background="Transparent"
 FontSize="20"
@@ -79,7 +76,7 @@ BorderBrush="#495B5B"
 Height="40" Width="300"
 Foreground="#495B5B"/>
 
-            <Label  HorizontalAlignment="Center"  VerticalAlignment="Center" Foreground="#495B5B" FontSize="20"  Content="Сбросить фильтры" />
+            <Label  HorizontalAlignment="Center"  VerticalAlignment="Center" Foreground="#495B5B" FontSize="20"  Content="Сбросить фильтры" GotFocus="Label_GotFocus" />
         </StackPanel>
 
        
