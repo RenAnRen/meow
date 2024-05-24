@@ -18,13 +18,11 @@ namespace design.MVVM.View
     /// <summary>
     /// Логика взаимодействия для DiscoveryView.xaml
     /// </summary>
-    public partial class MeetsView : UserControl
+    public partial class ContractorsView : UserControl
     {
-        public MeetsView()
+        public ContractorsView()
         {
             InitializeComponent();
         }
-
-      
     }
 }

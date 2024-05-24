@@ -26,11 +26,11 @@
                 <view:ContractorView />
             </DataTemplate>
 
+
             <DataTemplate DataType="{x:Type viewModel:ContractorsViewModel}">
                 <view:ContractorsView />
             </DataTemplate>
 
-            
             <DataTemplate DataType="{x:Type viewModel:SettingsViewModel}">
                 <view:SettingsView />
             </DataTemplate>
