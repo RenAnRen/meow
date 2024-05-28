@@ -40,7 +40,7 @@
                                     </Style>
                                 </TextBlock.Style>
                             </TextBlock>
-                            <Rectangle Margin="0 20 0 0" Width="520" Height="1" Fill="#495B5B"/>
+                            <Rectangle VerticalAlignment="Bottom" Width="520" Height="1.5" Fill="#495B5B"/>
                         </Grid>
                     </Border>
                 </ControlTemplate>

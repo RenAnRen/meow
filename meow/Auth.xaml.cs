@@ -31,7 +31,15 @@ namespace meow
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            SQLConnectionReader();
+         
+            if ((String.IsNullOrWhiteSpace(log.Text)) || String.IsNullOrWhiteSpace(passw.Password))
+            {
+                MessageBox.Show("Введите логин и пароль.");
+            }
+            else
+            {
+                SQLConnectionReader();
+            }
         }
 
         private void SQLConnectionReader()
@@ -45,7 +53,7 @@ namespace meow
 
             command.CommandText = "SELECT * FROM users WHERE login='" + log.Text + "' AND password ='" + passw.Password + "';";
             NpgsqlDataReader dr = command.ExecuteReader();
-
+            
             int count = 0;
             while (dr.Read())
             {
@@ -60,6 +68,7 @@ namespace meow
             }
             if (count > 1)
             {
+
                 MessageBox.Show("Логин и пароль повторяются. Попробуйте снова!");
             }
             if (count < 1)
