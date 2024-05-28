@@ -101,8 +101,7 @@ namespace design.MVVM.View
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MeetView meetsView = new MeetView();
-            
+            this.Content = new MeetView();
         }
     }
 }
