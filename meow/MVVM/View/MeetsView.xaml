@@ -96,7 +96,7 @@ Foreground="#495B5B"/>
                 <TextBox  HorizontalAlignment="Left" Width="490" Height="40" Style="{StaticResource Search}" Margin="380, 15,0,15" Grid.ColumnSpan="2">
 
                 </TextBox>
-                <Button Grid.Column="1" HorizontalAlignment="Left" Style="{StaticResource DarkButtonTheme}" Content="Добавить" FontSize="20" Height="50" Width="250" Margin="844,10,0,10"/>
+                <Button Grid.Column="1" HorizontalAlignment="Left" Style="{StaticResource DarkButtonTheme}" Content="Добавить" FontSize="20" Height="50" Width="250" Margin="844,10,0,10" Click="Button_Click"/>
 
 
             </Grid>

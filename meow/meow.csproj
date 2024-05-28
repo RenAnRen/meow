@@ -45,4 +45,8 @@
     <Resource Include="Images\user.jpg" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="UserControls\" />
+  </ItemGroup>
+
 </Project>

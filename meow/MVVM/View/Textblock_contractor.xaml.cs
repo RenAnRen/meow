@@ -13,25 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace design.MVVM.View
+namespace meow.UserControls
 {
     /// <summary>
-    /// Логика взаимодействия для HomeView.xaml
+    /// Логика взаимодействия для Textblock_contractor.xaml
     /// </summary>
-    public partial class SettingsView : UserControl
+    public partial class Textblock_contractor : UserControl
     {
-         
-
-        public SettingsView()
+        public Textblock_contractor()
         {
-           InitializeComponent();
-          
+            InitializeComponent();
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-         
-        }
-    } 
-   
+    }
 }

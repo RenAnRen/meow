@@ -22,9 +22,7 @@ namespace design.MVVM.View
     /// </summary>
     public partial class MeetsView : UserControl
     {
-        string SQL = "Server=yurilo-9916.7tc.aws-eu-central-1.cockroachlabs.cloud;Port=26257;Database=yurilo_db; User Id = yurilo_admin; Password=yrPjMJoa5LQZGO1owOKdNA;";
-
-
+      
         public MeetsView()
         {
             InitializeComponent();
@@ -32,6 +30,8 @@ namespace design.MVVM.View
             ComboBoxes();
 
         }
+  string SQL = "Server=yurilo-9916.7tc.aws-eu-central-1.cockroachlabs.cloud;Port=26257;Database=yurilo_db; User Id = yurilo_admin; Password=yrPjMJoa5LQZGO1owOKdNA;";
+
 
         private void ComboBoxes() 
         {
@@ -97,6 +97,12 @@ namespace design.MVVM.View
             comboBoxcont.SelectedIndex = -1;
             Date.Text = "ДД.ММ.ГГГГ";
             comboBox.SelectedIndex = -1;    
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MeetView meetsView = new MeetView();
+            
         }
     }
 }

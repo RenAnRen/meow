@@ -32,6 +32,10 @@ namespace design.MVVM.View
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+           
+         
+            
+
             //NpgsqlConnection sqlConnection = new NpgsqlConnection(SQL);
             //sqlConnection.Open();
 
