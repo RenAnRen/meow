@@ -18,12 +18,9 @@
         <viewModel:MainViewModel/>
     </Window.DataContext>
 
-   
- 
     <Border Background="White"
         CornerRadius="29">
         <Grid>
-
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="200"/>
                 <ColumnDefinition Width="59*" />
@@ -32,23 +29,27 @@
                 <ColumnDefinition Width="184.235"/>
                 <ColumnDefinition Width="215.765"/>
             </Grid.ColumnDefinitions>
-
             <Grid.RowDefinitions>
                 <RowDefinition Height="113"/>
                 <RowDefinition/>
-            </Grid.RowDefinitions>
-            
+            </Grid.RowDefinitions>            
             <ContentControl Grid.Row="1"
                    Grid.Column="0" 
                    Margin="10 10 10 10"
                    Content="{Binding CurrentView}" 
-                            Grid.ColumnSpan="5"
-                            FontFamily="Archivo Black"
-                />
-            
-            
-            <Grid Visibility="Hidden" x:Name="sidepanel" HorizontalAlignment="Left" Grid.ColumnSpan="2" Grid.RowSpan="2" Width="360" Height="1080" Background="#30A1A1" >
-                <Rectangle VerticalAlignment="Top" Width="48" Height="48" Panel.ZIndex="10" Margin="30,38,0,27" HorizontalAlignment="Left" MouseDown="Rectangle_MouseDown">
+                   Grid.ColumnSpan="5"
+                   FontFamily="Archivo Black"/>
+         
+            <Grid Visibility="Hidden" x:Name="sidepanel" 
+                        HorizontalAlignment="Left" 
+                        Grid.ColumnSpan="2" Grid.RowSpan="2" 
+                        Width="360" Height="1080" 
+                        Background="#30A1A1" >
+                <Rectangle VerticalAlignment="Top" 
+                        Width="48" Height="48" 
+                        Panel.ZIndex="10" Margin="30,38,0,27" 
+                        HorizontalAlignment="Left" 
+                        MouseDown="Rectangle_MouseDown">
                     <Rectangle.Fill>
                         <ImageBrush x:Name="light_menu" Stretch="UniformToFill"  ImageSource="/Images/light-menu.png"/>
                     </Rectangle.Fill>
