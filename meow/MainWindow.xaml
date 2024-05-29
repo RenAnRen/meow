@@ -160,11 +160,14 @@
 
                 <RadioButton Content="Контрагенты"
                 Height="50"
-                             FontFamily ="Archivo Black"
+                FontFamily ="Archivo Black"
                 Foreground="#495B5B"
                 FontSize="25" 
                 Style="{StaticResource MenuButtonTheme}"
-                Command="{Binding HomeViewCommand}" IsChecked="False" Unchecked="RadioButton_Unchecked" Checked="RadioButton_Checked"  />
+                Command="{Binding ContractorsViewCommand}"
+                IsChecked="False" 
+                Unchecked="RadioButton_Unchecked" 
+                Checked="RadioButton_Checked"  />
 
 
                 <RadioButton Content="Документы"

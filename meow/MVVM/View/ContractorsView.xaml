@@ -50,7 +50,7 @@ HorizontalContentAlignment="Center"
 VerticalContentAlignment="Center" />
 
          
-            <Label  HorizontalAlignment="Center"  VerticalAlignment="Center" Foreground="#495B5B" FontSize="20"  Content="Сбросить фильтры" GotFocus="Label_GotFocus" />
+            <Label  HorizontalAlignment="Center"  VerticalAlignment="Center" Foreground="#495B5B" FontSize="20"  Content="Сбросить фильтры"  />
         </StackPanel>
 
 
@@ -67,18 +67,19 @@ VerticalContentAlignment="Center" />
                     <ColumnDefinition Width="144*"/>
                     <ColumnDefinition Width="311*"/>
                 </Grid.ColumnDefinitions>
-                <TextBox  HorizontalAlignment="Left" Width="490" Height="40" Style="{StaticResource Search}" Margin="380, 15,0,15" Grid.ColumnSpan="2">
+                <TextBox x:Name="search" HorizontalAlignment="Left" Width="490" Height="40" Style="{StaticResource Search}" Margin="380, 15,0,15" Grid.ColumnSpan="2">
 
                 </TextBox>
-                <Button Grid.Column="1" HorizontalAlignment="Left" Style="{StaticResource DarkButtonTheme}" Content="Добавить" FontSize="20" Height="50" Width="250" Margin="844,10,0,10" Click="Button_Click"/>
-
-
+                <Button Grid.Column="1" HorizontalAlignment="Left" Style="{StaticResource DarkButtonTheme}" Content="Добавить" FontSize="20" Height="50" Width="250" Margin="844,10,0,10" />
+                
             </Grid>
         </StackPanel>
 
-       
+        <ListView x:Name="blocks" />
 
-       
+
+
+
 
 
     </Grid>

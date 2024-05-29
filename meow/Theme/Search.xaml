@@ -17,7 +17,7 @@
                                        BorderThickness="0"
                                        VerticalAlignment="Center"
                                      Padding="5"
-                                     Foreground="#30A1A1"
+                                     Foreground="#495b5b"
                                      x:Name="Search"/>
 
                             <TextBlock IsHitTestVisible="False"

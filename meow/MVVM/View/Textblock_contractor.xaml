@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:meow.UserControls"
              mc:Ignorable="d" 
-             d:DesignHeight="450" Background="White" d:DesignWidth="800">
+             d:DesignHeight="175" Background="White" d:DesignWidth="500">
     <Grid>
         <Border Width="500" Height="175" Background="White" BorderThickness="1" CornerRadius="30" BorderBrush="#30A1A1">
             <Border.Effect>
@@ -13,23 +13,22 @@
             </Border.Effect>
 
             <TextBlock Background="Transparent" Height="175"  Style="{StaticResource TextblockTheme}" Margin="1,5,9,-7"><InlineUIContainer>
-       <Grid>
+       <Grid Margin="20 5 0 0" Width="444">
            <Grid.ColumnDefinitions>
                <ColumnDefinition/>
                <ColumnDefinition/>
            </Grid.ColumnDefinitions>
            <Grid.RowDefinitions>
-               <RowDefinition/>
-               <RowDefinition/>
-               <RowDefinition/>
-               <RowDefinition/>
+               <RowDefinition Height="50"/>
+               <RowDefinition Height="8"/>
+               <RowDefinition  Height="30"/>
+               <RowDefinition  Height="50"/>
            </Grid.RowDefinitions>
                
-           <Label FontWeight="Bold" Grid.Column="0" Grid.Row="0" Foreground="#495B5B" x:Name="Time" Content="Время" FontSize="32" Margin="0,0,0,12" Grid.RowSpan="2" />
-           <Label  Grid.Column="0" Grid.Row="1" Foreground="#495B5B" x:Name="Type"  Content="Тип"/>
-           <Label Grid.Column="0" Grid.Row="2" Foreground="#495B5B" x:Name="Contractor" Content="Чел"/>
-              
-       </Grid>
+           <TextBlock  FontWeight="Bold" Grid.Column="0" Grid.Row="0" Foreground="#495B5B" x:Name="Time" Text="Время" FontSize="32"  />
+           <TextBlock  Grid.Column="0" FontSize="20" Grid.Row="2" Foreground="#495B5B" x:Name="Type"  Text="Тип"/>
+           <TextBlock Grid.Column="0" FontSize="20"  Grid.Row="3" Foreground="#495B5B" x:Name="Contractor" Text="Чел"/>
+         </Grid>
 
    </InlineUIContainer></TextBlock>
         </Border>
