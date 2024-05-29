@@ -10,33 +10,51 @@
              d:DesignHeight="1080" d:DesignWidth="1920"
              Background="White">
     <Grid>
-        <StackPanel HorizontalAlignment="Left"  VerticalAlignment="Center" Background="#EFF9F9" Width="360" Height="1080"/>
-        <ComboBox x:Name="comboBox" Text="Пользователь" 
-                  IsEditable="True"
-                  IsTextSearchEnabled="True"
-                  BorderBrush="#495B5B"
-Height="450" Width="800"
-                  Foreground="#495B5B"
-                  >
-            <ComboBoxItem>
-                <StackPanel>
-                    <TextBlock FontSize="16"><Run Text="Tom"/></TextBlock>
-                    <TextBlock><Run Text="Microsoft"/></TextBlock>
-                </StackPanel>
-            </ComboBoxItem>
-            <ComboBoxItem>
-                <StackPanel>
-                    <TextBlock FontSize="16"><Run Text="Bob"/></TextBlock>
-                    <TextBlock><Run Text="Google"/></TextBlock>
-                </StackPanel>
-            </ComboBoxItem>
-            <ComboBoxItem>
-                <StackPanel>
-                    <TextBlock FontSize="16"><Run Text="Sam"/></TextBlock>
-                    <TextBlock><Run Text="JetBrains"/></TextBlock>
-                </StackPanel>
-            </ComboBoxItem>
-        </ComboBox>
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center"  Background="#EFF9F9" Width="400"  Height="1080">
+
+
+            <ComboBox x:Name="comboBox" 
+                HorizontalAlignment="Center"
+                Margin="0 300 0 20"
+                Background="Transparent"
+                FontSize="20"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                Text="Тип контрагента" 
+                IsEditable="True"
+                IsTextSearchEnabled="True"
+                BorderBrush="#495B5B"
+                Height="40" Width="300"
+                Foreground="#495B5B"/>
+
+            <ComboBox x:Name="comboBoxserv"
+                    HorizontalAlignment="Center"
+                     Margin="20 0 10 20"
+                    Background="Transparent"
+                    FontSize="20"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Text="Услуга" 
+                    IsEditable="True"
+                    IsTextSearchEnabled="True"
+                    BorderBrush="#495B5B"
+                    Height="40" Width="300"
+                    Foreground="#495B5B" />
+            <DatePicker HorizontalAlignment="Center"  BorderBrush="#495B5B" Text="ДД.ММ.ГГГГ"
+Height="40" Width="300"
+Foreground="#495B5B" Margin="20 0 10 20"
+Background="Transparent"
+FontSize="20"
+                        x:Name="Date"
+HorizontalContentAlignment="Center"
+VerticalContentAlignment="Center" />
+
+         
+            <Label  HorizontalAlignment="Center"  VerticalAlignment="Center" Foreground="#495B5B" FontSize="20"  Content="Сбросить фильтры" GotFocus="Label_GotFocus" />
+        </StackPanel>
+
+
+
         <Separator Margin="0,0,0,10"
                    HorizontalAlignment="Stretch"
                    VerticalAlignment="Bottom"
@@ -49,38 +67,19 @@ Height="450" Width="800"
                     <ColumnDefinition Width="144*"/>
                     <ColumnDefinition Width="311*"/>
                 </Grid.ColumnDefinitions>
-                <TextBox  HorizontalAlignment="Left" Width="490" Height="40" Style="{StaticResource Search}" Margin="380,-15,0,15" Grid.ColumnSpan="2"/>
+                <TextBox  HorizontalAlignment="Left" Width="490" Height="40" Style="{StaticResource Search}" Margin="380, 15,0,15" Grid.ColumnSpan="2">
+
+                </TextBox>
+                <Button Grid.Column="1" HorizontalAlignment="Left" Style="{StaticResource DarkButtonTheme}" Content="Добавить" FontSize="20" Height="50" Width="250" Margin="844,10,0,10" Click="Button_Click"/>
+
+
             </Grid>
         </StackPanel>
 
-        <StackPanel Margin="100">
-            <Border Width="500" Height="175" Background="White" BorderThickness="1" CornerRadius="30" BorderBrush="#30A1A1">
-                <Border.Effect>
-                    <DropShadowEffect Direction="315" BlurRadius="10" ShadowDepth="2" Color="#30A1A1"/>
-                </Border.Effect>
+       
 
-                <TextBlock Background="Transparent" Height="175"  Style="{StaticResource TextblockTheme}" Margin="1,5,9,-7"><InlineUIContainer>
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition/>
-                                <ColumnDefinition/>
-                            </Grid.ColumnDefinitions>
-                            <Grid.RowDefinitions>
-                                <RowDefinition/>
-                                <RowDefinition/>
-                                <RowDefinition/>
-                                <RowDefinition/>
-                            </Grid.RowDefinitions>
-                                
-                            <Label FontWeight="Bold" Grid.Column="0" Grid.Row="0" Foreground="#495B5B" x:Name="Time" Content="qwdqwd" FontSize="32" Margin="0,0,0,12" Grid.RowSpan="2" />
-                            <Label  Grid.Column="0" Grid.Row="1" Foreground="#495B5B" x:Name="Type"  Content="qwdqwd"/>
-                            <Label Grid.Column="0" Grid.Row="2" Foreground="#495B5B" x:Name="Contractor" Content="qwdqwd"/>
-                            <Label  Grid.Column="0" Grid.Row="3" Content="qwdqwd"  Foreground="#495B5B" x:Name="Number"/>    
-                        </Grid>
+       
 
-                    </InlineUIContainer></TextBlock>
-            </Border>
-        </StackPanel>
 
     </Grid>
 </UserControl>

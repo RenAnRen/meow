@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Npgsql;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace design.MVVM.View
 {
@@ -28,30 +29,87 @@ namespace design.MVVM.View
         public ContractorView()
         {
             InitializeComponent();
+            ComboBoxes();
+        }
+
+        private void ComboBoxes()
+        {
+           
+                NpgsqlConnection sqlConnection = new NpgsqlConnection(SQL);
+                sqlConnection.Open();
+
+                NpgsqlCommand command = new NpgsqlCommand();
+                command.Connection = sqlConnection;
+                command.CommandType = CommandType.Text;
+
+                NpgsqlDataAdapter dataAdapter = new NpgsqlDataAdapter();
+                DataTable dataTable = new DataTable("yurilo_db.subject_types");
+                DataSet ds = new DataSet();
+                dataAdapter.SelectCommand = command;
+
+                command.CommandText = "SELECT name FROM yurilo_db.subject_types;";
+                NpgsqlDataReader dr = command.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    sub_type.Items.Add(dr["name"].ToString());
+                }
+
+                command.Dispose();
+                sqlConnection.Close();
+            
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+
+            NpgsqlConnection sqlConnection = new NpgsqlConnection(SQL);
+            sqlConnection.Open();
+
+            NpgsqlCommand command = new NpgsqlCommand();
+            command.Connection = sqlConnection;
+            command.CommandType = CommandType.Text;
+
+            NpgsqlDataAdapter dataAdapter = new NpgsqlDataAdapter();
+            DataTable dataTable = new DataTable("yurilo_db.counterparties");
+            dataAdapter.SelectCommand = command;
+
+            int id_subject_type = int.Parse(GetType());
            
-         
-            
+            command.CommandText = "INSERT INTO yurilo_db.counterparties (name, id_subject_type, address, number, company, inn, kpp, ogrn, email, notes) VALUES ('" + name.Text + "'," + id_subject_type + ",'" + address.Text + "','" + number.Text +  "','" + company.Text + "','"  + INN.Text + "','" + KPP.Text + "','"  + OGRN.Text + "','" + email.Text + "','" + notes.Text + "');";
 
-            //NpgsqlConnection sqlConnection = new NpgsqlConnection(SQL);
-            //sqlConnection.Open();
+            NpgsqlDataReader dr = command.ExecuteReader();
+            this.Content = new ContractorsView();
 
-            //NpgsqlCommand command = new NpgsqlCommand();
-            //command.Connection = sqlConnection;
-            //command.CommandType = CommandType.Text;
+        }
 
-            //NpgsqlDataAdapter dataAdapter = new NpgsqlDataAdapter();
-            //DataTable dataTable = new DataTable("yurilo_db.counterparties");
-            //dataAdapter.SelectCommand = command;
-            //command.CommandText = "INSERT INTO yurilo_db.counterparties (name, id_subject_type, address, number, company, INN, KPP, OGRN, email, notes) VALUES ('" + name.Text + "','" + subject_type.Text + "','" + address.Text + "','" + number.Text + "','" + company.Text + "','" + INN.Text + "','" + KPP.Text + "','" + OGRN.Text + "','" + email.Text + "','" + notes.Text + "');";
+        private string GetType()
+        {
+            NpgsqlConnection sqlConnection = new NpgsqlConnection(SQL);
+            sqlConnection.Open();
 
-            ////command.CommandText = "SELECT * FROM users WHERE login='" + log.Text + "' AND password ='" + passw.Password + "';";
-            //NpgsqlDataReader dr = command.ExecuteReader();
+            NpgsqlCommand command = new NpgsqlCommand();
+            command.Connection = sqlConnection;
+            command.CommandType = CommandType.Text;
+
+            NpgsqlDataAdapter dataAdapter = new NpgsqlDataAdapter();
+            DataTable dataTable = new DataTable("yurilo_db.subject_types");
+            DataSet ds = new DataSet();
+            dataAdapter.SelectCommand = command;
+
+            command.CommandText = "SELECT id_subject_types FROM yurilo_db.subject_types WHERE name='" + sub_type.SelectedValue.ToString() + "';";
+            NpgsqlDataReader dr = command.ExecuteReader();
+            var id = " ";
+            if (dr.Read())
+            {
+                id = dr[0].ToString();
+            }
+            return id;
 
 
+            command.Dispose();
+            sqlConnection.Close();
         }
     }
 }

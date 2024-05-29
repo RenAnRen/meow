@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\attach.png" />
     <None Remove="Images\delete.svg" />
     <None Remove="Images\doc.jpeg" />
     <None Remove="Images\edword.png" />
@@ -29,6 +30,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Images\attach.png" />
     <Resource Include="Images\delete.svg" />
   </ItemGroup>
 

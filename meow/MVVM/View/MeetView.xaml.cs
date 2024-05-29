@@ -10,6 +10,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
@@ -136,8 +137,13 @@ namespace design.MVVM.View
 
             
             int id_meet_type = int.Parse(GetMeetType());
-            command.CommandText = "INSERT INTO yurilo_db.meets (meet_type) VALUES (" + id_meet_type +  ");";
+            int id_emp = int.Parse(GetEmp());
+            int id_cont = int.Parse(GetCont());
 
+
+            //////// 
+            command.CommandText = "INSERT INTO yurilo_db.meets (resume, counterparties, employyes, meet_type) VALUES (" + notes.Text + "," + id_cont + "," + id_emp + "," +  id_meet_type +  ");";
+            /////
 
           
             NpgsqlDataReader dr = command.ExecuteReader();
@@ -157,12 +163,12 @@ namespace design.MVVM.View
             DataTable dataTable = new DataTable("yurilo_db.meet_types");
             DataSet ds = new DataSet();
             dataAdapter.SelectCommand = command;
-            string a ="Дополнительные услуги";
-            command.CommandText = "SELECT id_meet_types FROM yurilo_db.meet_types WHERE name='Дополнительные услуги';";
+            
+            command.CommandText = "SELECT id_meet_types FROM yurilo_db.meet_types WHERE name='" + Type.SelectedValue.ToString() + "';";
             NpgsqlDataReader dr = command.ExecuteReader();
             var id = "`";
             if (dr.Read()) { 
-              id = dr.ToString();
+              id = dr[0].ToString();
             }
             return id;
            
@@ -172,6 +178,61 @@ namespace design.MVVM.View
         }
 
 
+        private string GetEmp()
+        {
+            NpgsqlConnection sqlConnection = new NpgsqlConnection(SQL);
+            sqlConnection.Open();
+
+            NpgsqlCommand command = new NpgsqlCommand();
+            command.Connection = sqlConnection;
+            command.CommandType = CommandType.Text;
+
+            NpgsqlDataAdapter dataAdapter = new NpgsqlDataAdapter();
+            DataTable dataTable = new DataTable("yurilo_db.employees");
+            DataSet ds = new DataSet();
+            dataAdapter.SelectCommand = command;
+
+            command.CommandText = "SELECT id_employees  FROM yurilo_db.employees WHERE name='" + emp.SelectedValue.ToString() + "';";
+            NpgsqlDataReader dr = command.ExecuteReader();
+            var name = "`";
+            if (dr.Read())
+            {
+                name = dr[0].ToString();
+            }
+            return name;
+
+
+            command.Dispose();
+            sqlConnection.Close();
+        }
+
+        private string GetCont()
+        {
+            NpgsqlConnection sqlConnection = new NpgsqlConnection(SQL);
+            sqlConnection.Open();
+
+            NpgsqlCommand command = new NpgsqlCommand();
+            command.Connection = sqlConnection;
+            command.CommandType = CommandType.Text;
+
+            NpgsqlDataAdapter dataAdapter = new NpgsqlDataAdapter();
+            DataTable dataTable = new DataTable("yurilo_db.counterparties");
+            DataSet ds = new DataSet();
+            dataAdapter.SelectCommand = command;
+
+            command.CommandText = "SELECT id_counterparties  FROM yurilo_db.counterparties WHERE name='" + Cont.SelectedValue.ToString() + "';";
+            NpgsqlDataReader dr = command.ExecuteReader();
+            var name = "`";
+            if (dr.Read())
+            {
+                name = dr[0].ToString();
+            }
+            return name;
+
+
+            command.Dispose();
+            sqlConnection.Close();
+        }
 
 
     }
